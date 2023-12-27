@@ -5,6 +5,7 @@ const url = 'https://course-api.com/react-tabs-project';
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
+  const [currentItem, setCurrentItem] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,7 +33,11 @@ const App = () => {
 
   return (
     <main>
-      <JobInfo user={user} />
+      <JobInfo
+        user={user}
+        currentItem={currentItem}
+        setCurrentItem={setCurrentItem}
+      />
     </main>
   );
 };

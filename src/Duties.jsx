@@ -1,8 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
 import { FaAngleDoubleRight } from 'react-icons/fa';
 
-const Duties = ({ user }) => {
-  const { duties } = user[0];
+const Duties = ({ user, currentItem }) => {
+  const { duties } = user[currentItem];
   const id = uuidv4();
 
   return (
